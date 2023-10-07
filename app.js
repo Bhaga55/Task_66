@@ -12,5 +12,12 @@ APP_SERVER.use("/hall",HallRouter);
 APP_SERVER.use("/customer",CustomerRouter);
 APP_SERVER.use("/booking",BookingRouter);
 
+APP_SERVER.get("/",(req, res ,next) => {
+    return res.status(200).json({
+        message:"Server started successfully!!",
+    });
+});
+
+
 module.exports = APP_SERVER;
 
